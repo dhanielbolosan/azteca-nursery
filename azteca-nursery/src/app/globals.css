@@ -57,6 +57,17 @@ a {
 
 .custom-navbar {
   background-color: #2f5d31;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-transparent {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar-solid {
+  background-color: #2f5d31 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 .custom-navbar .navbar-brand,
