@@ -42,7 +42,7 @@ a {
 }
 
 .custom-navbar {
-  background-color: #2f5d31; /* a nice green */
+  background-color: #2f5d31;
 }
 
 .custom-navbar .navbar-brand,
@@ -57,10 +57,8 @@ a {
   cursor: pointer;
 }
 
-
-/* Hamburger toggle button base styles */
 .custom-navbar .navbar-toggler {
-  border: none; /* no border by default */
+  border: none;
   border-radius: 4px;
   transition: border-color 0.3s ease;
   display: flex;
@@ -76,4 +74,13 @@ a {
 .custom-navbar .navbar-toggler:focus-visible {
   outline: none;
   box-shadow: none;
+}
+
+.custom-offcanvas {
+  background-color: #2f5d31;
+  color: #faf4e9;
+}
+
+.custom-offcanvas .btn-close {
+  filter: invert(1) brightness(2);
 }
