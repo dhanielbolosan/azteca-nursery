@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Container, Nav, Navbar, NavLink, Offcanvas} from 'react-bootstrap';
+import { Container, Nav, Navbar, Offcanvas} from 'react-bootstrap';
 
 const TopNavbar: React.FC = () => {
     return (
         <Navbar expand="lg" className="fixed-top custom-navbar">
             <Container className="position-relative">
-                <Navbar.Brand href="#" className="position-absolute start-50 translate-middle-x">Azteca Nursery</Navbar.Brand>
+                <Navbar.Brand href="#home" className="position-absolute start-50 translate-middle-x">Azteca Nursery</Navbar.Brand>
                 <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" className="d-lg-none ms-auto" />
                 <Navbar.Offcanvas className="custom-offcanvas" id="offcanvasNavbar-expand-lg" aria-labelledby="offcanvasNavbarLabel-expand-lg" placement="end">
                     <Offcanvas.Header closeButton>
@@ -17,13 +17,13 @@ const TopNavbar: React.FC = () => {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav className="me-auto">
-                            <NavLink href="/about-us">About Us</NavLink>
-                            <NavLink href="/catalog">Catalog</NavLink>
+                            <Nav.Link href="#about">About Us</Nav.Link>
+                            <Nav.Link href="#catalog">Catalog</Nav.Link>
                         </Nav>
                         <Nav className="ms-auto">
-                            <NavLink href="/swap-meet">Swap Meet</NavLink>
-                            <NavLink href="/contact-us">Contact Us</NavLink>
-                            <NavLink href="/">EN/ES</NavLink>
+                            <Nav.Link href="#swap-meet">Swap Meet</Nav.Link>
+                            <Nav.Link href="#contact">Contact Us</Nav.Link>
+                            <Nav.Link href="/">EN/ES</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
