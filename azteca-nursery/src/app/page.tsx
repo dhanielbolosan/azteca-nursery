@@ -1,11 +1,5 @@
 import { Container, Button } from "react-bootstrap";
 
-const homepageImages = [
-    "/homepage-holder1.jpg",
-    "/homepage-holder2.jpg",
-    "/homepage-holder3.jpg",
-];
-
 export default function Home() {
   return (
     <>
@@ -24,7 +18,7 @@ export default function Home() {
       </div>
       <div id="about" className="section">
         <Container>
-          <h2>About Us</h2>
+          <h2 style={{ fontFamily: "Pt Serif" }}>About Us</h2>
           <p>This is the About Us section.</p>
         </Container>
       </div>
