@@ -1,4 +1,4 @@
-import { Container, Button, Row, Col, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 export default function Home() {
   return (
