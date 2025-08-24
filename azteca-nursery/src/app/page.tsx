@@ -1,3 +1,6 @@
+'use client';
+
+import { Container, Button, Image } from "react-bootstrap";
 
 export default function Home() {
   return (
@@ -12,7 +15,7 @@ export default function Home() {
           <Container>
             <h1 style={{ fontFamily: "American Brewery Rough", color: "#faf4e9", fontSize: "3rem"}}>Azteca Nursery</h1>
             <h2 style= {{ fontFamily: "Montserrat", color: "#f8cf2c" }}>Locally Grown Plants</h2>
-            <Button className="custom-button">View Catalog</Button>
+            <Button className="custom-button" href="/catalog">View Catalog</Button>
           </Container>
         </div>
       </div>
@@ -34,23 +37,25 @@ export default function Home() {
       <div id="catalog" className="section">
         <Container>
           <h2>Catalog</h2>
-          <p>This is the Catalog section.</p>
         </Container>
       </div>
 
-      {/* Swap meet */}
-      <div id="swap-meet" className="section">
+      {/* Swap Meet */}
+      <div id="swap-meet" className="section" style={{ border: "solid 1px black"}}>
         <Container>
-          <h2>Swap Meet</h2>
-          <p>This is the Swap Meet section.</p>
-        </Container>
-      </div>
-
-      {/* Contact */}
-      <div id="contact" className="section">
-        <Container>
-          <h2>Contact</h2>
-          <p>This is the Contact section.</p>
+          <h1 style={{ fontFamily: 'Pt Serif', color: "#242124" }}>Catch Us At Our Stand!</h1>
+          <Image className="stand-image" src="/images/homepage-holder2.jpg" alt="Image of Stand in Swap Meet"/>
+          <h3 style={{ fontWeight: 'bold' }}>Maui Swap Meet</h3>
+            <p>
+            310 W Kaahumanu Ave, Kahului, HI 96732<br />
+            Saturday 7am - 1pm
+            </p>
+          <Button
+            className="custom-button"
+            onClick={() => window.open("https://maps.app.goo.gl/KELbZ4s9K6irmpwJ9", "_blank")}
+            >
+              Get Directions
+          </Button>
         </Container>
       </div>
     </>
