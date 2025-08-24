@@ -72,7 +72,7 @@ a {
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,17 +173,17 @@ a {
 }
 
 #pic1 {
-  background-image: url('/homepage-holder1.jpg');
+  background-image: url('/images/homepage-holder1.jpg');
   animation-delay: 0s;
 }
 
 #pic2 {
-  background-image: url('/homepage-holder2.jpg');
+  background-image: url('/images/homepage-holder2.jpg');
   animation-delay: 15s; /* (8s visible + 4s fade) * 1 */
 }
 
 #pic3 {
-  background-image: url('/homepage-holder3.jpg');
+  background-image: url('/images/homepage-holder3.jpg');
   animation-delay: 30s; /* (8s visible + 4s fade) * 2 */
 }
 
@@ -226,6 +226,49 @@ a {
   align-items: center;
 }
 
+/* about us */
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  text-align: left;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-image {
+  width: 50%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: clamp(12px, 5%, 32px);
+}
+
+.about-text-container {
+  width: 60%;
+}
+
+.about-title {
+  font-family: 'Pt Serif';
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #242124;
+}
+
+.about-text {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
 /* buttons */
 .custom-button {
   background-color: #9b3e36;
@@ -248,4 +291,26 @@ a {
 
 .custom-button:focus {
   outline-offset: 2px;
+}
+
+/* responsive elements */
+
+/* tablets */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+/* mobile phones */
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5rem;
+  }
+  .about-text {
+    font-size: 0.8rem;
+  }
 }
