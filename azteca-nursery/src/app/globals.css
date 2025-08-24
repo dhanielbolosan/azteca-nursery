@@ -79,7 +79,6 @@ a {
   align-items: center;
   text-align: center;
   padding: 1rem;
-  border: 1px solid black
 }
 
 /* navbar */
@@ -99,18 +98,20 @@ a {
 }
 
 .custom-navbar .navbar-brand,
-.custom-navbar .nav-link {
+.custom-navbar .nav-link,
+.footer-link {
   color: #F4E6CD;
   transition: color 0.3s ease;
 }
 
 .custom-navbar .nav-link:hover,
-.custom-navbar .nav-link:focus {
+.custom-navbar .nav-link:focus,
+.footer-link:hover{
   color: #E09540;
   cursor: pointer;
 }
 
-.custom-navbar .nav-link.active {
+.custom-navbar .nav-link:active{
   color: #F4E6CD;
   transition: color 0.3s ease;
 }
@@ -135,6 +136,19 @@ a {
 .custom-offcanvas {
   background-color: #A24E3C !important;
   color: #F4E6CD;
+}
+
+.custom-offcanvas .offcanvas-title {
+  font-family: 'American Brewery Rough';
+  color: #F4E6CD;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.custom-offcanvas .offcanvas-title:hover,
+.custom-offcanvas .offcanvas-title:focus {
+  color: #E09540;
 }
 
 .custom-offcanvas .nav-link {
@@ -173,18 +187,18 @@ a {
 }
 
 #pic1 {
-  background-image: url('/images/homepage-holder1.jpg');
+  background-image: url("/images/homepage-holder1.jpg");
   animation-delay: 0s;
 }
 
 #pic2 {
-  background-image: url('/images/homepage-holder2.jpg');
-  animation-delay: 15s; /* (8s visible + 4s fade) * 1 */
+  background-image: url("/images/homepage-holder2.jpg");
+  animation-delay: 15s; 
 }
 
 #pic3 {
-  background-image: url('/images/homepage-holder3.jpg');
-  animation-delay: 30s; /* (8s visible + 4s fade) * 2 */
+  background-image: url("/images/homepage-holder3.jpg");
+  animation-delay: 30s;
 }
 
 @keyframes fade {
@@ -249,7 +263,7 @@ a {
   height: auto;
   max-height: 500px;
   object-fit: cover;
-  border-radius: clamp(12px, 5%, 32px);
+  border-radius: 15px;
 }
 
 .about-text-container {
@@ -269,6 +283,24 @@ a {
   padding-bottom: 0.5rem;
 }
 
+/* swap meet */
+.stand-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 50px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* footer */
+.custom-footer {
+  background-color: #5C4033;
+  color: #F4E6CD;
+  text-align: center;
+}
+
 /* buttons */
 .custom-button {
   background-color: #9b3e36;
@@ -282,11 +314,11 @@ a {
 
 .custom-button:hover {
   background-color: #9b3e36 !important;
-  filter: brightness(0.7);
+  filter: brightness(0.9);
 }
 
 .custom-button:active {
-  filter: brightness(0.5);
+  filter: brightness(0.75);
 }
 
 .custom-button:focus {
@@ -294,7 +326,6 @@ a {
 }
 
 /* responsive elements */
-
 /* tablets */
 @media (max-width: 768px) {
   .about-title {
