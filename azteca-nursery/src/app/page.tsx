@@ -1,6 +1,7 @@
 'use client';
 
 import { Container, Button, Image } from "react-bootstrap";
+import PlantCard from "@/components/PlantCard";
 
 export default function Home() {
   return (
@@ -36,12 +37,12 @@ export default function Home() {
       {/* Catalog */}
       <div id="catalog" className="section">
         <Container>
-          <h2>Catalog</h2>
+          <PlantCard />
         </Container>
       </div>
 
       {/* Swap Meet */}
-      <div id="swap-meet" className="section" style={{ border: "solid 1px black"}}>
+      <div id="swap-meet" className="section">
         <Container>
           <h1 style={{ fontFamily: 'Pt Serif', color: "#242124" }}>Catch Us At Our Stand!</h1>
           <Image className="stand-image" src="/images/homepage-holder2.jpg" alt="Image of Stand in Swap Meet"/>
