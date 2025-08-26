@@ -54,7 +54,7 @@ export default function PlantSlider({ plants }: PlantSliderProps) {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        centerMode: true,
+        centerMode: false,
         centerPadding: "0px",
         nextArrow: <CustomArrows icon={<ArrowRight size={25} color="#ffffff" />} />,
         prevArrow: <CustomArrows icon={<ArrowLeft size={25} color="#ffffff" />} />,
