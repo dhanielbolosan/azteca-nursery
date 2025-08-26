@@ -338,6 +338,11 @@ a {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
+  outline: none;
+}
+
+.plant-card:focus {
+  outline: none;
 }
 
 .plant-image {
