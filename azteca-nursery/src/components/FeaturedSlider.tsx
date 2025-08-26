@@ -37,6 +37,7 @@ function CustomArrows({ className, onClick, icon }: CustomArrowProps) {
                 width: "40px",
                 height: "40px",
                 opacity: 0.6,
+                zIndex: 2,
             }}
             onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
             onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.6")}
