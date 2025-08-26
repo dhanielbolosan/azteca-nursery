@@ -58,15 +58,15 @@ export default function PlantSlider({ plants }: PlantSliderProps) {
         nextArrow: <CustomArrows icon={<ArrowRight size={25} color="#ffffff" />} />,
         prevArrow: <CustomArrows icon={<ArrowLeft size={25} color="#ffffff" />} />,
         responsive: [
-            { breakpoint: 1024, settings: { slidesToShow: 2 } },
-            { breakpoint: 768, settings: { slidesToShow: 1 } },
+            { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false } },
+            { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false } },
         ],
     };
 
     return (
         <Slider {...settings}>
             {plants.map((plant) => (
-                <div key={plant.id} style={{ display: 'flex', justifyContent: 'center' }}>
+                <div key={plant.id} style={{ display: 'flex', justifyContent: 'center', padding: "0 10px" }}>
                     <PlantCard plant={plant} />
                 </div>
             ))}
