@@ -1,9 +1,47 @@
 'use client';
 
 import { Container, Button, Image } from "react-bootstrap";
-import PlantCard from "@/components/PlantCard";
+import FeaturedSlider from "@/components/FeaturedSlider";
 
 export default function Home() {
+  const featuredPlants = [
+    {
+      id: 1,
+      name: "Plant 1",
+      image: "/images/plants/123_1 2.JPEG",
+      price: 10,
+      description: "A beautiful plant 1"
+    },
+    {
+      id: 2,
+      name: "Plant 2",
+      image: "/images/plants/123_1 3.JPEG",
+      price: 15,
+      description: "A beautiful plant 2"
+    },
+    {
+      id: 3,
+      name: "Plant 3",
+      image: "/images/plants/123_1 4.JPEG",
+      price: 20,
+      description: "A beautiful plant 3"
+    },
+    {
+      id: 4,
+      name: "Plant 4",
+      image: "/images/plants/123_1 5.JPEG",
+      price: 15,
+      description: "A beautiful plant 4"
+    },
+    {
+      id: 5,
+      name: "Plant 5",
+      image: "/images/plants/123_1 6.JPEG",
+      price: 20,
+      description: "A beautiful plant 5"
+    }
+  ]
+
   return (
     <>
       {/* Homepage */}
@@ -37,7 +75,11 @@ export default function Home() {
       {/* Catalog */}
       <div id="catalog" className="section">
         <Container>
-          <PlantCard />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "1rem"}}>
+            <h2 style={{ fontFamily: "Pt Serif", color: "#242124", fontSize:"2rem" }}>Featured Plants</h2>
+            <a href="/catalog"style={{ fontFamily: "Pt Serif", color: "#242124", cursor: "pointer", fontSize: "1.5rem" }}>View More</a>
+          </div>
+          <FeaturedSlider plants={featuredPlants} />
         </Container>
       </div>
 

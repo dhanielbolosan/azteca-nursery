@@ -1,7 +1,19 @@
 import { useState } from 'react';
 import { Image, Modal, Button } from 'react-bootstrap';
 
-export default function PlantCard() {
+type Plant = {
+    id: number;
+    image: string;
+    name: string;
+    price?: number;
+    description?: string;
+};
+
+interface PlantCardProps {
+    plant: Plant;
+}
+
+export default function PlantCard({ plant }: PlantCardProps) {
     const [showModal, setShowModal] = useState(false);
 
     const handleOpenModal = () => setShowModal(true);
@@ -12,8 +24,8 @@ export default function PlantCard() {
             <div className="plant-card" onClick={handleOpenModal}>
                 <Image
                     className="plant-image"
-                    src="/images/plants/123_1 2.JPEG"
-                    alt="Plant"
+                    src={plant.image}
+                    alt={plant.name}
                 />
                 <div className="plant-overlay">
                     <h3 
@@ -24,16 +36,16 @@ export default function PlantCard() {
                         marginBottom: "0.5rem"
                         }}
                     >
-                        Plant Name
+                        {plant.name}
                     </h3>
                     <p
                         style={{
-                        color: "#E09540",
-                        fontFamily: "Pt Serif",
-                        fontSize: "1.5rem",
+                            color: "#E09540",
+                            fontFamily: "Pt Serif",
+                            fontSize: "1.5rem",
                         }}
                     >
-                        $10
+                        {plant.price ? `$${plant.price}` : 'N/A'}
                     </p>
                 </div>
             </div>
@@ -51,15 +63,15 @@ export default function PlantCard() {
                         <div className="plant-modal-image">
                             <Image
                                 className="plant-modal-img"
-                                src="/images/plants/123_1 2.JPEG"
-                                alt="Plant"
+                                src={plant.image}
+                                alt={plant.name}
                             />
 
                         </div>
                         <div className="plant-modal-info">
-                            <h2 style={{ fontFamily: "Pt Serif", fontSize: "2rem", color: "#242124" }}>Plant name</h2>
-                            <p style={{ fontSize: "1rem", lineHeight: "1.5", color: "#242124" }}>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
-                            <p style={{ fontSize: "1.5rem", color: "#242124" }}>$10</p>
+                            <h2 style={{ fontFamily: "Pt Serif", fontSize: "2rem", color: "#242124" }}>{plant.name}</h2>
+                            <p style={{ fontSize: "1rem", lineHeight: "1.5", color: "#242124" }}>{plant.description}</p>
+                            <p style={{ fontSize: "1.5rem", color: "#242124" }}>{plant.price ? `$${plant.price}` : 'N/A'}</p>
                             <Button className="custom-button" style={{ maxWidth: "150px" }}>Check Availability</Button>
                         </div>
                     </div>

@@ -329,13 +329,15 @@ a {
 .plant-card {
   background-color: #d6c6a8;
   border-radius: 12px;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 
 .plant-image {
@@ -410,7 +412,20 @@ a {
   text-align: left;
 }
 
+/* slick slider */
+.slick-prev::before,.slick-next::before{
+   display:none;
+    
+}
 
+.slick-dots li button:before {
+  color: #E09540 !important;
+  opacity: 0.6 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+}
 
 /* responsive elements */
 /* tablets */
